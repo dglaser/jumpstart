@@ -38,6 +38,9 @@ def rails_6?
 end
 
 def add_gems
+  gem_group :development, :test do
+    gem 'factory_bot_rails'
+  end
   gem 'administrate', github: "excid3/administrate", branch: 'jumpstart'
   gem 'bootstrap', '~> 4.3', '>= 4.3.1'
   gem 'devise', '~> 4.7', '>= 4.7.0'
