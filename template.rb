@@ -40,6 +40,7 @@ end
 def add_gems
   gem_group :development, :test do
     gem 'factory_bot_rails'
+    gem 'rspec-rails', '~> 4.0'
   end
   gem 'administrate', github: "excid3/administrate", branch: 'jumpstart'
   gem 'bootstrap', '~> 4.3', '>= 4.3.1'
@@ -260,6 +261,7 @@ after_bundle do
   add_users
   add_webpack
   add_javascript
+  generate "rspec:install"
   add_announcements
   add_notifications
   add_multiple_authentication
